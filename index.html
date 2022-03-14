@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SNEAKERS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="outer-wrapper">
+        <div class="container inner-wrapper">
+          <div class="navbar">
+            <img src="assets/icon-menu.svg" alt="" class="menu-icon" id="closebtn" onclick="menutoggle(this.src)" />
+            <div class="logo">
+              <a href="#"><img src="assets/logo.svg" alt="sneakers" class="sn-atom-logo" /></a>
+            </div>
+            <nav>
+              <ul id="MenuItems" class="sn-mol-items">
+                <li><a href="#" class="sn-atom-items">Collections</a></li>
+                <li><a href="#" class="sn-atom-items">Men</a></li>
+                <li><a href="#" class="sn-atom-items">Women</a></li>
+                <li><a href="#" class="sn-atom-items">About</a></li>
+                <li><a href="#" class="sn-atom-items">Contact</a></li>
+              </ul>
+            </nav>
+            <div class="abc">
+              <a href="#" id="cartImg" onclick="bucketlist();">
+              </a>
+              <a href="#"><img src="assets/icon-cart.svg" onclick="cartOpen();addToCart();bucketlist();" class="sn-atom-cart"
+                  alt="" /></a>
+              <a href="#"><img src="assets/image-avatar.png" class="sn-atom-profile" alt="" /></a>
+            </div>
+          </div>
+        </div>
+        <hr class="sn-hr-line">
+    </header>
+    <section style="display: flex;justify-content: end;">
+      <div class="cart" id="cart" style="display: none;">
+        <div class="title">Cart</div>
+        <hr class="sn-hr-line1">
+        <div class="row productDetails">
+          <div class="col-4 pImg" >
+            <img id="imgg" class="cartImg--img"src="" alt="">
+          </div>
+          <div class="emptyCart col-12 sn-empty-cart" id="ecart"><b>The Cart Is Empty</b></div>
+          <div class="col-5">
+            <p id="title" class="cartImg--text"></p>
+            <p id="totalprice" class="cartImg--price"></p>
+          </div>
+          <div class="col-3 delete">
+            <img id="dltbtn"src="assets/icon-delete.svg" class="cartImg--delete"onclick="clearCart();bucketlist();" alt="">
+          </div>
+        </div>
+        <button class="cartsectionbutton" id="checkOut">Checkout</button>
+        <div id="empty" style="display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90%;
+            font-size: 16px;
+            color: #69707D;
+            font-weight: bold;
+            line-height: 26px;">
+        </div>
+      </div>
+    </section>
+    <div class="small-container single-product" id="item1">
+      <div class="row">
+        <div class="col-2 sn-slideshow-large">
+          <img id="myBtn" src="assets/image-product-1.jpg" class="sn-main-img" alt="" width="100%" id="ProductImg" />
+          <div class="small-img-row" id="thumbnails">
+            <div class="small-img-col sn-img-active" id="change1 ">
+              <img src="assets/image-product-1.jpg" id="cimage" onclick="changeImage(this.src,id)" class="sn-sub-img sn-img-active__opa" id="sn-img-active" 
+                alt="" width="100%" class="small-img" />
+            </div>
+            <div class="small-img-col" id="change2">
+              <img src="assets/image-product-2.jpg" id="cimage2" onclick="changeImage(this.src,id)" class="sn-sub-img" alt=""
+                width="100%" class="small-img" />
+            </div>
+            <div class="small-img-col" id="change3">
+              <img src="assets/image-product-3.jpg" id="cimage3" onclick="changeImage(this.src,id)" class="sn-sub-img" alt=""
+                width="100%" class="small-img" />
+            </div>
+            <div class="small-img-col" id="change4">
+              <img src="assets/image-product-4.jpg" id="cimage4" onclick="changeImage(this.src,id)" class="sn-sub-img" alt=""
+                width="100%" class="small-img" />
+            </div>
+          </div>
+        </div>
+        <div class="slideshow-container sn-slideshow-small">
+          <div class="mySlides1 fade1">
+            <img src="assets/image-product-1.jpg" class="sn-small-slide-img" style="width:100%">
+          </div>
+          <div class="mySlides1 fade1">
+            <img src="assets/image-product-2.jpg" class="sn-small-slide-img" style="width:100%">
+          </div>
+          <div class="mySlides1 fade1">
+            <img src="assets/image-product-3.jpg" class="sn-small-slide-img" style="width:100%">
+          </div>
+          <div class="mySlides1 fade1">
+            <img src="assets/image-product-4.jpg" class="sn-small-slide-img" style="width:100%">
+          </div>
+          <a class="prev" onclick="plusSlides1(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides1(1)">&#10095;</a>
+        </div>
+        <div style="text-align:center" class="slidesmallscreen">
+          <img class="dot1" onclick="currentSlide1(1)" src="assets/image-product-1-thumbnail.jpg" alt="">
+          <img class="dot1" onclick="currentSlide1(2)" src="assets/image-product-2-thumbnail.jpg" alt="">
+          <img class="dot1" onclick="currentSlide1(3)" src="assets/image-product-3-thumbnail.jpg" alt="">
+          <img class="dot1" onclick="currentSlide1(4)" src="assets/image-product-4-thumbnail.jpg" alt="">
+        </div>
+        <div class="col-2 sn-product-desc">
+          <p class="sn-prod-eyebrow">SNEAKER COMPANY</p>
+          <p class="sn-prod-title" id="product_title">Fall Limited Edition Sneakers</p>
+          <p class="sn-prod-desc">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <p class="sn-prod-price" id="product_price">$125.00</p>
+          <p class="sn-prod-discount">50%</p>
+          <p id="price" class="sn-prod-disamount">$250.00</p>
+          <div class="btn-plus-minus">
+            <button class="minus buttonclass minus-btn" aria-label="Decrease by one">
+              <img src="assets/icon-minus.svg" class="sn-decrement-icon" alt="" />
+            </button>
+            <input id="quantity" class="number dim initialvalue" min="1" type="number" value="1">
+            <button class="plus buttonclass plus-btn" aria-label="Increase by one">
+              <img src="assets/icon-plus.svg" class="sn-increment-icon" alt="" />
+            </button>
+          </div>
+          <div class="btnaddtocart">
+            <button class="btn" onclick="storeLoc();bucketlist();"><img src="assets/icon-cart1.svg" class="sn-atom-cart1" alt="" />Add
+              to cart</button>
+            <br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="slideshow-container">
+            <span class="close">&times;</span>
+            <div class="mySlides fade">
+              <img class="sn-modalImg" src="assets/image-product-1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img class="sn-modalImg" src="assets/image-product-2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img class="sn-modalImg" src="assets/image-product-3.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+              <img class="sn-modalImg" src="assets/image-product-4.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          <div style="text-align:center">
+            <img class="dot" onclick="currentSlide(1)" src="assets/image-product-1-thumbnail.jpg" alt="">
+            <img class="dot" onclick="currentSlide(2)" src="assets/image-product-2-thumbnail.jpg" alt="">
+            <img class="dot" onclick="currentSlide(3)" src="assets/image-product-3-thumbnail.jpg" alt="">
+            <img class="dot" onclick="currentSlide(4)" src="assets/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
