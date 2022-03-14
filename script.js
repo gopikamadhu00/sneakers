@@ -167,7 +167,7 @@ function storeLoc() {
   var cart_img = document.getElementById("cimage");
   myArray.push(cart_img.src);
 
-  var cprice = document.getElementById("price").innerHTML;
+  var cprice = document.getElementById("product_price").innerHTML;
   myArray.push(cprice);
 
   var cdescription = document.getElementById("product_title").innerHTML;
@@ -189,7 +189,7 @@ function addToCart() {
   var total = myArray1[1] * myArray1[3];
   document.getElementById(
     "totalprice"
-  ).innerHTML = `${myArray1[1]} x ${myArray1[3]} $${total}.00`;
+  ).innerHTML = `$${myArray1[1]} x ${myArray1[3]} $${total}.00`;
 }
 
 function clearCart() {
