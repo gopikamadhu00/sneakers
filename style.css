@@ -1,6 +1,8 @@
 /* The Modal (background) */
 .emptyCart {
-    
+  color: #69707D;
+  position: absolute;
+  top: 145px;    
   justify-content: center;
   align-items: center;
   width: 100%;
